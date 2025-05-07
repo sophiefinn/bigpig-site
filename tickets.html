@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Big Pig UFC - Tickets</title>
+  <link rel="stylesheet" href="layoutt.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tickets.html">Tickets</a></li>
+      <li><a href="bio.html">Bio</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
+  
+
+  <header>
+    <h1>🎟️ Big Pig - Get Your Tickets!</h1>
+  </header>
+
+  <section class="ticket-list">
+    <!-- Fight 1 -->
+    <div class="fight-card">
+        <h3>Big Pig vs. Bobby Elliot</h3>
+        <p><strong>Date:</strong> June 7th, 2025 • <strong>Location:</strong> 3 Arena</p>
+        
+        <!-- Ticket Image -->
+        <img src="images/ticket.jpeg" alt="Big Pig Ticket" class="ticket-image">
+      
+        <!-- Get Ticket Button placed under the image -->
+        <button onclick="claimTicket('Big Pig vs Bobby')">Get Ticket</button>
+      </div>
+      
+
+    <!-- Add more fights here, if necessary -->
+
+    <p id="ticket-confirmation" class="hidden"></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Big Pig Promotions. All rights snorted.</p>
+  </footer>
+
+  <script>
+    function claimTicket(fightName) {
+      const confirmMsg = document.getElementById('ticket-confirmation');
+      confirmMsg.textContent = `🐷 You have secured your spot for "${fightName}" See you there!`;
+      confirmMsg.classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
